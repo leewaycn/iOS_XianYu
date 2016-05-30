@@ -92,6 +92,7 @@
         }
     }
     
+    [self bringSubviewToFront:self.plusBtn];
     
 }
 
@@ -99,7 +100,7 @@
 - (void)plusBtnDidClick
 {
     //如果tabbar的代理实现了对应的代理方法，那么就调用代理的该方法
-    if ([self.delegate respondsToSelector:@selector(tabBarPlusBtnClick:)]) {
+    if ([self.myDelegate respondsToSelector:@selector(tabBarPlusBtnClick:)]) {
         [self.myDelegate tabBarPlusBtnClick:self];
     }
 
